@@ -9,18 +9,17 @@
 /* Begin PBXBuildFile section */
 		5A42E0E32AA43AFF0026A96D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A42E0E22AA43AFF0026A96D /* AppDelegate.swift */; };
 		5A42E0E52AA43AFF0026A96D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A42E0E42AA43AFF0026A96D /* SceneDelegate.swift */; };
-		5A42E0E72AA43AFF0026A96D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A42E0E62AA43AFF0026A96D /* ViewController.swift */; };
-		5A42E0EA2AA43AFF0026A96D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A42E0E82AA43AFF0026A96D /* Main.storyboard */; };
+		5A42E0E72AA43AFF0026A96D /* VideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A42E0E62AA43AFF0026A96D /* VideoVC.swift */; };
 		5A42E0EC2AA43B000026A96D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A42E0EB2AA43B000026A96D /* Assets.xcassets */; };
 		5A42E0EF2AA43B000026A96D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A42E0ED2AA43B000026A96D /* LaunchScreen.storyboard */; };
+		5A42E0F82AA43B940026A96D /* YouTubeiOSPlayerHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 5A42E0F72AA43B940026A96D /* YouTubeiOSPlayerHelper */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5A42E0DF2AA43AFF0026A96D /* youtube-player.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "youtube-player.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A42E0E22AA43AFF0026A96D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A42E0E42AA43AFF0026A96D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5A42E0E62AA43AFF0026A96D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5A42E0E92AA43AFF0026A96D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5A42E0E62AA43AFF0026A96D /* VideoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoVC.swift; sourceTree = "<group>"; };
 		5A42E0EB2AA43B000026A96D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A42E0EE2AA43B000026A96D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A42E0F02AA43B000026A96D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -31,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A42E0F82AA43B940026A96D /* YouTubeiOSPlayerHelper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,8 +58,7 @@
 			children = (
 				5A42E0E22AA43AFF0026A96D /* AppDelegate.swift */,
 				5A42E0E42AA43AFF0026A96D /* SceneDelegate.swift */,
-				5A42E0E62AA43AFF0026A96D /* ViewController.swift */,
-				5A42E0E82AA43AFF0026A96D /* Main.storyboard */,
+				5A42E0E62AA43AFF0026A96D /* VideoVC.swift */,
 				5A42E0EB2AA43B000026A96D /* Assets.xcassets */,
 				5A42E0ED2AA43B000026A96D /* LaunchScreen.storyboard */,
 				5A42E0F02AA43B000026A96D /* Info.plist */,
@@ -83,6 +82,9 @@
 			dependencies = (
 			);
 			name = "youtube-player";
+			packageProductDependencies = (
+				5A42E0F72AA43B940026A96D /* YouTubeiOSPlayerHelper */,
+			);
 			productName = "youtube-player";
 			productReference = 5A42E0DF2AA43AFF0026A96D /* youtube-player.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +113,9 @@
 				Base,
 			);
 			mainGroup = 5A42E0D62AA43AFF0026A96D;
+			packageReferences = (
+				5A42E0F62AA43B940026A96D /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */,
+			);
 			productRefGroup = 5A42E0E02AA43AFF0026A96D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +132,6 @@
 			files = (
 				5A42E0EF2AA43B000026A96D /* LaunchScreen.storyboard in Resources */,
 				5A42E0EC2AA43B000026A96D /* Assets.xcassets in Resources */,
-				5A42E0EA2AA43AFF0026A96D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A42E0E72AA43AFF0026A96D /* ViewController.swift in Sources */,
+				5A42E0E72AA43AFF0026A96D /* VideoVC.swift in Sources */,
 				5A42E0E32AA43AFF0026A96D /* AppDelegate.swift in Sources */,
 				5A42E0E52AA43AFF0026A96D /* SceneDelegate.swift in Sources */,
 			);
@@ -147,14 +151,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5A42E0E82AA43AFF0026A96D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5A42E0E92AA43AFF0026A96D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5A42E0ED2AA43B000026A96D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -297,7 +293,6 @@
 				INFOPLIST_FILE = "youtube-player/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -325,7 +320,6 @@
 				INFOPLIST_FILE = "youtube-player/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -363,6 +357,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5A42E0F62AA43B940026A96D /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:youtube/youtube-ios-player-helper.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5A42E0F72AA43B940026A96D /* YouTubeiOSPlayerHelper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5A42E0F62AA43B940026A96D /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */;
+			productName = YouTubeiOSPlayerHelper;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5A42E0D72AA43AFF0026A96D /* Project object */;
 }
